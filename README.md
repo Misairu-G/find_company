@@ -12,5 +12,3 @@ GPT Prompt:
 conda create -n ash python=3.10 requests bs4 pandas
 python get_company_info.py
 ```
-
-
