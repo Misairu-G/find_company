@@ -1,4 +1,4 @@
-# Ashley is fishing for her dream job
+# Ashley is doing great in Uni
 
 GPT Prompt:
 
