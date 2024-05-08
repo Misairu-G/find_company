@@ -9,6 +9,6 @@ GPT Prompt:
 # Cooper is better than GPT
 
 ```shell
-conda create -n ash python=3.10 requests bs4 pandas
-python get_company_info.py
+# conda create -n ash python=3.10 requests bs4 pandas
+python3 get_company_info.py
 ```
