@@ -7,8 +7,11 @@ def fetch_glassdoor_reviews(url):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
     }
     response = requests.get(url, headers=headers)
+    if response.status_code / 200 != 1:
+        with open("error_response.html", "wb") as resp_fd:
+            resp_fd.write(response.content)
+        raise ValueError(f"The URL {url} returns a invalid response with code {response.status_code}.")
     soup = BeautifulSoup(response.content, 'html.parser')
-    
     
     reviews = soup.find_all('div', class_='gdReview')
     data = []
